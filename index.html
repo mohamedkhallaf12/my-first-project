@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover my dream job as a Software Engineer. Learn what we do, why it's fun, and how to become one.">
+    <title>My Dream Job | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="badge">Career Path</div>
+            <h1>My Dream Job <br><span class="gradient-text">Software Engineer </span></h1>
+            <p class="subtitle">Exploring the world of coding, building, and problem-solving.</p>
+        </header>
+
+        <section class="cards-grid">
+            <!-- Card 1 -->
+            <article class="card" id="card1">
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h2>The Role</h2>
+                    <p class="question" id="text1">What do I do?</p>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-primary" onclick="toggleText(1, true)">Reveal</button>
+                    <button class="btn btn-secondary" onclick="toggleText(1, false)">Undo</button>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card" id="card2">
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <line x1="10" y1="9" x2="8" y2="9" />
+                        </svg>
+                    </div>
+                    <h2>The Passion</h2>
+                    <p class="question" id="text2">Why is it fun?</p>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-primary" onclick="toggleText(2, true)">Reveal</button>
+                    <button class="btn btn-secondary" onclick="toggleText(2, false)">Undo</button>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card" id="card3">
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h2>The Path</h2>
+                    <p class="question" id="text3">How can you become one?</p>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-primary" onclick="toggleText(3, true)">Reveal</button>
+                    <button class="btn btn-secondary" onclick="toggleText(3, false)">Undo</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
