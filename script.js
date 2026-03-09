@@ -1,15 +1,15 @@
 const contentData = {
     1: {
         original: "What do I do?",
-        revealed: "I build apps and websites that help people."
+        revealed: "I build amazing apps and websites that help people to do cool things! 🚀"
     },
     2: {
         original: "Why is it fun?",
-        revealed: "Because coding is exciting and can create anything you want."
+        revealed: "Because coding is like Magic! 🪄 You can create literally anything you imagine."
     },
     3: {
         original: "How can you become one?",
-        revealed: "Learning, Coding, and Working hard."
+        revealed: "By learning, playing with code, and never giving up! 💪"
     }
 };
 
@@ -17,22 +17,27 @@ function toggleText(id, isReveal) {
     const textElement = document.getElementById(`text${id}`);
     const cardElement = document.getElementById(`card${id}`);
 
-    // Add a small animation effect
+    // Add a fun wiggle animation to the card when a button is clicked!
+    cardElement.classList.remove('wiggle');
+    // Trigger reflow to restart animation on consecutive clicks
+    void cardElement.offsetWidth;
+    cardElement.classList.add('wiggle');
+
+    // Smoothly scale down before changing text
+    textElement.style.transform = 'scale(0.5)';
     textElement.style.opacity = '0';
-    textElement.style.transform = 'translateY(5px)';
 
     setTimeout(() => {
         if (isReveal) {
             textElement.innerHTML = contentData[id].revealed;
             textElement.classList.add('revealed-text');
-            cardElement.classList.add('active');
         } else {
             textElement.innerHTML = contentData[id].original;
             textElement.classList.remove('revealed-text');
-            cardElement.classList.remove('active');
         }
 
+        // Reset scale/opacity so the CSS @keyframes take over
+        textElement.style.transform = '';
         textElement.style.opacity = '1';
-        textElement.style.transform = 'translateY(0)';
     }, 200);
 }
